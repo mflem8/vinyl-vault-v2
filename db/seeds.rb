@@ -8,5 +8,6 @@
 
 rock = Genre.create(name: 'Rock')
 country = Genre.create(name: 'Country')
-hip-hop = Genre.create(name: 'Hip-Hop')
 jazz = Genre.create(name: 'Jazz')
+
+Album.create(title: 'Appetite for Destruction', artist: "Guns N' Roses", image_url: 'https://images-na.ssl-images-amazon.com/images/I/91ksS-ioRpL._SX466_.jpg', genre_id: rock.id)
