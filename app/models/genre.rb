@@ -1,3 +1,3 @@
 class Genre < ApplicationRecord
-    has_many :vinyls
+    has_many :albums
 end
