@@ -4,7 +4,7 @@ class CreateAlbums < ActiveRecord::Migration[6.0]
       t.string :title
       t.string :artist
       t.string :image_url
-      t.integer :genre_id
+      t.references :genre, null: false, foreign_key: true
 
       t.timestamps
     end
