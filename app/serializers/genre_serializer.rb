@@ -1,3 +1,4 @@
 class GenreSerializer < ActiveModel::Serializer
-attributes :name
+    attributes :name
+    has_many :albums
 end
