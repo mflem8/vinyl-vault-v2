@@ -9,8 +9,8 @@
 Genre.destroy_all
 Album.destroy_all
 
-Genre.create(name: "Rock")
-Genre.create(name: "Jazz")
-Genre.create(name: "Country")
+rock = Genre.create(name: "Rock")
+jazz = Genre.create(name: "Jazz")
+country = Genre.create(name: "Country")
 
-Album.create(title: "Appetite For Destruction", artist: "Guns N' Roses", image_url: "https://images-na.ssl-images-amazon.com/images/I/91ksS-ioRpL._SX466_.jpg", genre: "Rock")
+Album.create(title: "Appetite For Destruction", artist: "Guns N' Roses", image_url: "https://images-na.ssl-images-amazon.com/images/I/91ksS-ioRpL._SX466_.jpg", genre_id: rock.id)
