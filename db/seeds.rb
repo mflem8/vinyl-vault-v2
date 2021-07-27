@@ -5,10 +5,3 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
-rock = Genre.create(name: 'Rock')
-country = Genre.create(name: 'Country')
-jazz = Genre.create(name: 'Jazz')
-
-Album.create(title: 'Appetite for Destruction', artist: "Guns N' Roses", image_url: 'https://images-na.ssl-images-amazon.com/images/I/91ksS-ioRpL._SX466_.jpg', genre_id: rock.id)
-Album.create(title: 'A Touch of Jazz', artist: "Frankie Valli", image_url: 'https://images-na.ssl-images-amazon.com/images/I/81-JoFkh%2BFS._SX466_.jpg', genre_id: jazz.id)
