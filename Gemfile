@@ -19,8 +19,10 @@ gem 'puma', '~> 4.1'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+gem 'sqlite3', '~> 1.4.2'
+
 #JSON
-# gem 'fast_jsonapi'
+gem 'fast_jsonapi'
 gem 'jsonapi-serializer'
 gem 'active_model_serializers'
 
