@@ -2,25 +2,25 @@ class AlbumsController < ApplicationController
     
     def index
         albums = Album.all
-        render json: albums
+        render json: AlbumSerializer.new(albums)
     end
 
     def show
         album = Album.find(params[:id])
-        render json: album
+        render json: AlbumSerializer.new(album)
     end
 
     def create
         album = Album.new(album_params)
         if album.save
-            render json: album, status: :accepted
+            render json: AlbumSerializer.new(album), status: :accepted
         else
             render json: { errors: album.errors.full_messages }, status: :unprocessible_entity
         end
     end
 
     def destroy
-        album = Album.find_by(params[:id])
+        album = Album.find(params[:id])
         album.destroy
         render json: { message: "#{album.name} was deleted successfully." }
     end
