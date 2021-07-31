@@ -1,8 +1,8 @@
 class AlbumsController < ApplicationController
     
     def index
-        albums = Album.all
-        render json: AlbumSerializer.new(albums)
+        @albums = Album.all
+        render json: @albums
     end
 
     def show
@@ -28,6 +28,6 @@ class AlbumsController < ApplicationController
     private
 
     def album_params
-        params.require(:album).permit(:title, :artist, :image_url, :genre_id)
+        params.require(:album).permit(:title, :artist, :image_url, :genre, :genre_id)
     end
 end

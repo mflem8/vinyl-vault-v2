@@ -2,7 +2,7 @@ class GenresController < ApplicationController
 
     def index
         genres = Genre.all
-        render json: GenreSerializer.new(genres)
+        render json: genres, status: 200
     end
 
 end
