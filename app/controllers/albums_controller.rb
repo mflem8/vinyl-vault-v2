@@ -7,13 +7,13 @@ class AlbumsController < ApplicationController
 
     def show
         album = Album.find(params[:id])
-        render json: AlbumSerializer.new(album)
+        render json: album
     end
 
     def create
         album = Album.new(album_params)
         if album.save
-            render json: AlbumSerializer.new(album), status: :accepted
+            render json: album
         else
             render json: { errors: album.errors.full_messages }, status: :unprocessible_entity
         end
